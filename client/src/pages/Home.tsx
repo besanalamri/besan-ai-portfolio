@@ -8,7 +8,7 @@ import {
 const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1h1vuEhA6J2MeSeuAPda1Pw8k9eg_CETp?usp=sharing";
 const LINKEDIN = "https://www.linkedin.com/in/besan-alamri-816722250?utm_source=share_via&utm_content=profile&utm_medium=member_ios";
 const EMAIL = "almrybysan18@gmail.com";
-const ASSET_BASE = "https://besanai-pc4knebn.manus.space";
+const ASSET_BASE = import.meta.env.BASE_URL === "/besan-ai-portfolio/" ? "https://besanai-pc4knebn.manus.space" : "";
 
 const projects = [
   { number: "01", title: "من الأرض الفارغة إلى ورود", titleEn: "From Empty Land to Flowers", english: "AI video study", category: "Motion experiment", categoryAr: "تجربة فيديو متحركة", description: "فيديو إبداعي يحوّل مشهدًا طبيعيًا إلى لحظة مليئة بالحياة والحركة.", descriptionEn: "A creative video study that transforms an empty landscape into a vivid moment full of life and motion.", tags: ["Video", "AI", "Creative"], accent: "violet", icon: Film, mediaType: "video", video: `${ASSET_BASE}/manus-storage/empty-land-flowers_cf6f894c.mp4`, image: "https://lh3.googleusercontent.com/drive-storage/AJQWtBMw8ISsNXCJjT057m4ee9Hwrn8D25mTqODMWYbR93Q70pHCvkIC-KT8jLwEr3oweerQWNKJn0Ia5fd2DvXPc5ZDpu_xu_1ThdDwQSR1GeN_rTihpQ=s600", href: "https://drive.google.com/file/d/1WZJM_iRaUgWlUNRGrUp0Fk6ya_nJ60Tm/view?usp=drivesdk" },
