@@ -48,6 +48,11 @@ button { font: inherit; }
 .main-nav a:hover { color: var(--violet); }
 .header-cta { display: inline-flex; align-items: center; gap: 6px; padding: 10px 15px; border: 1px solid rgba(169,137,255,.4); border-radius: 10px; font-size: 11px; color: var(--violet); transition: background .2s ease, transform .2s ease; }
 .header-cta:hover { background: rgba(169,137,255,.1); transform: translateY(-2px); }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.language-toggle { display: inline-flex; align-items: center; gap: 5px; padding: 8px 9px; border: 1px solid rgba(255,255,255,.12); border-radius: 9px; background: rgba(255,255,255,.025); color: #8588a5; font: 600 10px "Space Grotesk", sans-serif; transition: border-color .2s ease, color .2s ease, background .2s ease; }
+.language-toggle:hover { border-color: rgba(169,137,255,.55); color: var(--text); background: rgba(169,137,255,.08); }
+.language-toggle i { color: #4f526c; font-style: normal; }
+.language-toggle .active { color: var(--violet); }
 .menu-toggle { display: none; border: 0; background: transparent; color: var(--text); padding: 7px; }
 
 .hero-section { position: relative; min-height: 850px; padding-top: 190px; display: flex; align-items: center; }
@@ -125,6 +130,8 @@ button { font: inherit; }
 .services-section .section-heading h2 { color: #17172c; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 57px; }
 .service-card { position: relative; min-height: 284px; padding: 27px 25px; border: 1px solid rgba(23,23,44,.12); background: rgba(255,255,255,.32); transition: transform .25s var(--ease-out), background .25s ease, box-shadow .25s ease; overflow: hidden; }
+.scroll-reveal { opacity: 0; transform: translateY(24px) scale(.985); transition: opacity .7s var(--ease-out) var(--delay, 0ms), transform .7s var(--ease-out) var(--delay, 0ms); }
+.scroll-reveal.is-visible { opacity: 1; transform: translateY(0) scale(1); }
 .service-card::after { content: ""; position: absolute; width: 135px; height: 135px; border-radius: 50%; top: -75px; left: -65px; background: radial-gradient(circle, rgba(169,137,255,.26), transparent 70%); transition: transform .3s var(--ease-out); }
 .service-card:hover { transform: translateY(-7px); background: rgba(255,255,255,.7); box-shadow: 0 20px 45px rgba(37,31,76,.1); }
 .service-card:hover::after { transform: scale(1.45); }
@@ -206,6 +213,15 @@ button { font: inherit; }
 .footer-inner span svg { color: var(--violet); }
 .footer-inner a { display: flex; align-items: center; gap: 7px; color: #9699b6; transition: color .2s ease; }
 .footer-inner a:hover { color: var(--violet); }
+.lang-en .hero-content, .lang-en .about-copy, .lang-en .project-info { direction: ltr; }
+.lang-en .hero-kicker { text-align: left; }
+.lang-en .hero-metrics strong, .lang-en .hero-metrics small { text-align: left; }
+.lang-en .about-text-grid p, .lang-en .section-copy, .lang-en .project-info > p:not(.project-english) { text-align: left; }
+.lang-en .about-aside, .lang-en .about-grid, .lang-en .credentials-grid { direction: ltr; }
+.lang-en .about-copy, .lang-en .credentials-grid > div { direction: ltr; }
+.lang-en .certificate-card div + div span { text-align: left; }
+.lang-en .project-info { text-align: left; }
+.lang-en .project-meta { direction: ltr; }
 
 .reveal-up { animation: revealUp .8s var(--ease-out) both; }
 .reveal-scale { animation: revealScale .9s .1s var(--ease-out) both; }
